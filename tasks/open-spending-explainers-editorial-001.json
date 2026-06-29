@@ -1,0 +1,36 @@
+{
+  "id": "open-spending-explainers-editorial-001",
+  "title": "Non-partisan editorial / neutrality policy specification (describe-don't-evaluate)",
+  "project": "open-spending-explainers",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "governance", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Open-Spending-Explainers produces plain-language, source-cited explainers of government budgets and public contracts, one jurisdiction at a time, built only from open/PD/openly-licensed data. Budgets are inherently political, so neutrality is a safety property, not a tone: an explainer that calls spending 'wasteful', frames a cut as a 'raid', or implies a vendor did wrong has caused harm even if every number is correct. The non-partisan editorial policy is therefore a hard product requirement built FIRST and enforced by a CI lint plus independent review - not a disclaimer footer. This is the cold-start task that specifies that policy before any explainer is generated. No partner, public-finance expert reviewer, or audience is yet secured.",
+  "objective": "Write the authoritative non-partisan editorial / neutrality policy specification that all later templates, generation, lint, and review must implement and be tested against: the describe-don't-evaluate invariant, the concrete banned-framing taxonomy, the required fiscal-context elements, the three enforcement points (draft-time NEUTRALITY_SYSTEM charter, CI neutrality lint, independent human/expert review), the no-allegations rule, the editorial red-team taxonomy, and the labeling and expert-review gates.",
+  "acceptanceCriteria": [
+    "States the core invariant - describe what the open data shows, never evaluate it - and bans advocacy, calls-to-action, 'should' statements, and value judgments (waste/efficiency, fair/unfair, raid/giveaway)",
+    "Enumerates the banned-framing taxonomy in concrete, testable terms: loaded lexicon, loaded comparatives, causal-blame, selective-omission/cherry-picking, allegation-by-implication, and election/ballot/campaign framing",
+    "Defines the fiscal context every explainer must state: fiscal year; nominal vs real with named deflator and base year; budgeted vs actual; fund accounting; and explicit data limits/caveats",
+    "Specifies three enforcement points - draft-time NEUTRALITY_SYSTEM charter, CI neutrality lint (fail-closed: ambiguous framing routes to human review, never auto-passes), and independent human/expert review - plus the no-allegations rule for named officials and vendors",
+    "Defines the editorial red-team taxonomy the suite must cover with at least 8 cases per banned-framing category, including insider-misuse vectors (framing smuggling, editorializing-by-citation-choice, comparison gaming)",
+    "Mandates per-explainer labeling ('describes published open data; not financial/legal advice; not an audit') and the snapshot-scoped public-finance expert-review gate before content ships",
+    "Reviewed and signed off by an independent neutrality reviewer (recorded in the reviewers ledger), and noted for public-finance review"
+  ],
+  "resources": [
+    "planning/projects/open-spending-explainers/PLAN.md",
+    "CLAUDE.md",
+    "docs/good-deed-definition.md",
+    "packages/schema/src/schemas.ts",
+    "planning/projects/public-official-guide/PLAN.md"
+  ],
+  "output": "A reviewed editorial-policy specification (the non-partisan neutrality charter) defining the describe-don't-evaluate invariant, the banned-framing taxonomy, required fiscal-context elements, the three enforcement points, the no-allegations rule, the editorial red-team taxonomy, and the labeling/expert-review gates - the contract that open-spending-explainers-neutrality-003 (neutrality lint) and open-spending-explainers-template-010 (explainer template + generation) implement and verify.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
