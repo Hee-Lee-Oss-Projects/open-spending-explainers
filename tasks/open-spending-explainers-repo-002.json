@@ -1,0 +1,32 @@
+{
+  "id": "open-spending-explainers-repo-002",
+  "title": "Monorepo + pnpm + TS/ESM + CI (build/test/lint) skeleton",
+  "project": "open-spending-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "software"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Open-Spending-Explainers follows Elyos engineering conventions: TypeScript, ESM, pnpm workspaces. All subsequent pipeline, gate, and content tasks depend on a working monorepo skeleton with a green CI baseline. This cold-start task sets up the project structure so that neutrality-003 (lint), license-004 (provenance gate), and all later pipeline packages have a home and a CI harness to run in.",
+  "objective": "Bootstrap the project monorepo with pnpm workspaces, TypeScript ESM configuration, an initial CI pipeline (build, test, lint), and the package structure that downstream pipeline and gate tasks will populate.",
+  "acceptanceCriteria": [
+    "pnpm workspace with TypeScript ESM configuration compiles cleanly from a fresh checkout",
+    "CI pipeline (build/test/lint) runs and passes on the skeleton; subsequent package additions do not require CI re-architecture",
+    "Package layout provides homes for lib/editorial, lib/provenance, lib/ingest, lib/reconcile, lib/context, lib/pii, lib/explainer, site/, and scripts/ as described in PLAN.md",
+    "Dependency and secret scanning are wired into CI",
+    "README notes the project description, license (MIT for code; CC-BY-4.0 for content/datasets), and contribution flow",
+    "PR merged with green CI; maintainer review passed"
+  ],
+  "resources": [
+    "PLAN.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR containing the monorepo skeleton: pnpm workspace, TypeScript ESM config, CI pipeline (build/test/lint), package structure matching the PLAN.md architecture, and dependency/secret scanning — the foundation all subsequent tasks build on.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

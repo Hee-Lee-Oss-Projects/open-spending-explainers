@@ -1,0 +1,33 @@
+{
+  "id": "open-spending-explainers-hardening-016",
+  "title": "Hardening: expanded neutrality red-team, WCAG 2.2 AA + plain-language, reconciliation/reproducibility verification + partner runbook",
+  "project": "open-spending-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Before the project can be handed to a distribution partner, it must be hardened for real readers and real-world use. This means expanding the neutrality red-team suite (including insider-misuse vectors), verifying WCAG 2.2 AA accessibility and plain-language reading-level targets, confirming end-to-end reproducibility (regenerate identically from snapshot checksum and template version), and producing a partner onboarding and handoff runbook. Depends on neutrality-003, reconcile-007, and publish-014.",
+  "objective": "Harden the project for partner readiness: expand the neutrality red-team suite (100% pass including insider-misuse vectors), verify WCAG 2.2 AA and plain-language reading-level compliance on core explainers, confirm end-to-end reconciliation and reproducibility (re-run yields byte/figure-identical output from snapshot checksum + template version), and write the partner onboarding/handoff runbook.",
+  "acceptanceCriteria": [
+    "Expanded neutrality red-team suite still achieves 100% pass/redirect; insider-misuse vectors (framing smuggling, editorializing-by-citation-choice, comparison gaming, allegation-by-implication) are all covered with regression cases",
+    "Core pilot jurisdiction explainers meet WCAG 2.2 AA accessibility requirements verified by an accessibility audit",
+    "Core pilot jurisdiction explainers meet the plain-language reading-level target verified by a readability scorer",
+    "End-to-end reproducibility verified: regenerating explainers from the same snapshot checksum and template version produces byte/figure-identical output",
+    "Partner onboarding and handoff runbook written: covers deploy, source re-ingest, snapshot re-verification, and partner support",
+    "Reviewed and signed off by the neutrality reviewer and maintainer; PR merged with green CI"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR containing the expanded neutrality red-team suite, accessibility and readability verification results, end-to-end reproducibility confirmation, and partner onboarding/handoff runbook — completing M4 partner-readiness hardening.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

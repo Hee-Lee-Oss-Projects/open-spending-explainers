@@ -1,0 +1,32 @@
+{
+  "id": "open-spending-explainers-pii-008",
+  "title": "PII entity-vs-person screen (aggregate/entity-level only; redact private individuals)",
+  "project": "open-spending-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Public contracts data can name natural persons — sole proprietors, named officials — alongside business entities. Open-Spending-Explainers surfaces entity-level and aggregate facts only; personal data of private individuals (personal addresses, personal identifiers) must be redacted or withheld, not published. The PII entity-vs-person classifier is a privacy safeguard that must be in place before any contracts data is processed. Depends on schema-005 (data model defining supplierIsEntity).",
+  "objective": "Implement the PII entity-vs-person screen (lib/pii) that classifies contract parties as entity or natural person, defaults to surfacing entity/aggregate-level data only, and redacts or withholds personal data of private individuals (personal addresses, personal identifiers) before any contracts data flows downstream.",
+  "acceptanceCriteria": [
+    "Classifies each contract party as entity or natural person (the supplierIsEntity flag in the Contract data model) based on the source record",
+    "Default output surfaces entity-level or aggregate-level data only; personal data of private individuals (personal address, personal identifiers) is redacted or withheld before downstream use",
+    "No profiling, no targeting, and no voter-data linkage in any output",
+    "Tested on fixtures including sole-proprietor rows, named officials, and entity parties across the expected data formats",
+    "PR merged with green CI and maintainer review passed"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR containing the PII entity-vs-person classifier (lib/pii) that enforces aggregate/entity-level-only output and redacts private-individual personal data from contracts before downstream processing.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

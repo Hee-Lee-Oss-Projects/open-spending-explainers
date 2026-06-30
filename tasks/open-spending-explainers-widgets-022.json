@@ -1,0 +1,33 @@
+{
+  "id": "open-spending-explainers-widgets-022",
+  "title": "Embeddable, accessible figure widgets for partners",
+  "project": "open-spending-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "software"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Distribution partners (newsrooms, libraries, civic-tech orgs) may want to embed individual budget or contracts figures as widgets in their own publications. These widgets reuse the companion dataset already produced by the pipeline and must not editorialize in captions — captions must describe the figure neutrally, following the same editorial policy as the explainers. WCAG 2.2 AA accessibility is required. This is a backlog item for after the pilot explainers and companion datasets are stable.",
+  "objective": "Build embeddable, accessible figure widgets that partners can embed in their publications, reusing the companion Frictionless Tabular Data Package, with neutrality-compliant captions and WCAG 2.2 AA accessibility.",
+  "acceptanceCriteria": [
+    "Embeddable widgets built for individual figures drawn from the companion Frictionless Tabular Data Package; no independent data sourcing",
+    "Widget captions are neutrality-compliant: describe the figure without editorializing, no advocacy, no allegation framing",
+    "Widgets meet WCAG 2.2 AA accessibility requirements",
+    "Partner embed integration documented so newsrooms/libraries/civic-tech orgs can self-serve",
+    "No proprietary data or unlicensed sources used; reuses only the CC-BY-4.0 companion dataset",
+    "PR merged with green CI and maintainer review passed"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR containing embeddable, accessible figure widgets that reuse the companion dataset with neutrality-compliant captions and WCAG 2.2 AA accessibility — a partner distribution aid.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "open-spending-explainers-publish-014",
+  "title": "Static publishing site + companion dataset export (CC-BY) + corrections/erratum changelog",
+  "project": "open-spending-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "software"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The publishing site is where budget and contracts explainers become accessible to residents, journalists, students, and officials. It must be fast, accessible (WCAG 2.2 AA), and offline-friendly, and ship a machine-readable Frictionless Tabular Data Package companion dataset alongside each explainer so readers can verify and reuse the numbers. A public corrections/erratum changelog is a hard requirement so any figure error is corrected transparently within the SLA. This implements the site/ and publishing layer from PLAN.md. Depends on content-011.",
+  "objective": "Implement the static publishing site (site/) and companion dataset export pipeline: an accessible, fast, offline-friendly static site (Astro/Eleventy) that publishes explainers with their fiscal year, data sources, snapshot date, and 'describes published open data; not advice; not an audit' label — plus a Frictionless Tabular Data Package companion dataset per explainer (CC-BY-4.0) and a public corrections/erratum changelog.",
+  "acceptanceCriteria": [
+    "Static site built with an accessible static-site generator (Astro or Eleventy) that is fast and offline-friendly",
+    "Each explainer displays its fiscal year, data sources, snapshot date, and a 'describes published open data; not financial/legal advice; not an audit' label with a 'verify it yourself' link to the companion dataset",
+    "Frictionless Tabular Data Package companion dataset exported alongside each explainer under CC-BY-4.0, containing all source figures with provenance",
+    "Public corrections/erratum changelog is live: any figure correction is logged, the affected explainer and dataset are re-issued, and the change is visible to readers",
+    "Staleness handling: each explainer carries its fiscalYear and validUntil; when superseded, the explainer auto-banners as superseded and links to the current version",
+    "PR merged with green CI and maintainer review passed"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR containing the static publishing site (site/) with accessible explainer pages, Frictionless Tabular Data Package companion dataset export (CC-BY-4.0), staleness/superseded bannering, and a public corrections/erratum changelog.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

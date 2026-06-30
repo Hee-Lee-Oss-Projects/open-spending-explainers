@@ -1,0 +1,33 @@
+{
+  "id": "open-spending-explainers-context-013",
+  "title": "Fiscal-context layer (nominal/real, per-capita, FY normalization) + comparison guardrails",
+  "project": "open-spending-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Misleading fiscal context — presenting nominal figures without noting inflation, comparing across incompatible accounting bases, or mixing fiscal years — causes harm even when every underlying number is correct. The fiscal-context layer applies nominal-to-real conversion (with named deflator and base year recorded as provenance), per-capita normalization, and fiscal-year alignment. Critically, comparison guardrails block or annotate cross-jurisdiction and cross-year comparisons when accounting bases (GASB vs IPSAS), fiscal years, or nominal/real bases differ. Depends on reconcile-007.",
+  "objective": "Implement the fiscal-context layer (lib/context) that applies nominal-to-real conversion with a named deflator and base year (recorded as provenance), per-capita normalization, and fiscal-year alignment — and implements comparison guardrails that block or annotate cross-jurisdiction or cross-year comparisons when accounting bases, fiscal years, or nominal/real bases differ.",
+  "acceptanceCriteria": [
+    "Applies nominal-to-real conversion using a named deflator series and base year; both the specific deflator series and base year are recorded as provenance alongside every real-terms figure",
+    "Per-capita normalization applied where used, with the population source and retrieval date recorded as provenance",
+    "Fiscal-year alignment implemented: data spanning different fiscal years is explicitly aligned or flagged, never silently compared",
+    "Comparison guardrails: cross-jurisdiction and cross-year comparisons are blocked or annotated when accounting bases (e.g., GASB vs IPSAS), fiscal years, or nominal/real differ; tested on fixture cases",
+    "The system never conflates budgeted with actual in fiscal context presentation",
+    "Reviewed and signed off by the public-finance expert; PR merged with green CI and maintainer review passed"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR containing the fiscal-context layer (lib/context) with nominal-to-real conversion (provenance-recorded deflator and base year), per-capita normalization, fiscal-year alignment, and comparison guardrails blocking or annotating incompatible cross-jurisdiction/cross-year comparisons.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

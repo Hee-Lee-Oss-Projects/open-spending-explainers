@@ -1,0 +1,32 @@
+{
+  "id": "open-spending-explainers-eval-029",
+  "title": "Minimal grounded+neutral kill-gate eval (handful of fixtures, early go/no-go)",
+  "project": "open-spending-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Before investing in M2 content (pilot jurisdiction budget explainers), the project needs an early signal that the grounded+cited+neutral approach actually produces better output than a blank-slate 'summarize this budget' baseline. This minimal kill-gate eval at M1 answers that question on a small fixture set so content investment is gated on a go/no-go rather than waiting for the full M4 eval (eval-015). If grounded+cited+neutral does not at least trend ahead of baseline on accuracy, citation, and neutrality, M2 content work pauses for review. Depends on ingest-006 and reconcile-007.",
+  "objective": "Implement a minimal eval harness that runs grounded+cited+neutral generation against a blank-slate baseline on a small fixture set and reports the delta on accuracy, citation coverage, and neutrality as an early go/no-go signal before M2 content investment.",
+  "acceptanceCriteria": [
+    "Runs grounded+cited+neutral generation versus a blank-slate 'summarize this budget' baseline on a small fixture set",
+    "Reports the delta on accuracy, citation coverage, and neutrality for both approaches",
+    "If grounded+cited+neutral does not at least trend ahead of the blank-slate baseline on all three dimensions, M2 content investment pauses for review rather than proceeding",
+    "The go/no-go result is recorded and referenced in the M1 Definition of Done",
+    "Reviewed and signed off by the maintainer and neutrality reviewer; PR merged with green CI"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR containing the minimal eval harness (scripts/eval-explainer.ts or similar) that compares grounded+cited+neutral versus blank-slate generation on fixtures and records an early go/no-go result gating M2 content investment.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

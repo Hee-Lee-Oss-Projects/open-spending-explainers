@@ -1,0 +1,32 @@
+{
+  "id": "open-spending-explainers-i18n-021",
+  "title": "Internationalization + community translations of explainers",
+  "project": "open-spending-explainers",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "education"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "To serve non-English-speaking communities in the pilot jurisdiction, the explainers may be translated by community volunteers. Each translation must preserve the neutrality of the source explainer (no editorializing, no framing drift), keep all figures intact and reconciled, and go through a per-language neutrality review before publication. This is a backlog item for after the pilot English explainers are stable and a community translation program is in place.",
+  "objective": "Establish internationalization infrastructure and community translation workflows for pilot jurisdiction explainers, ensuring each translation preserves neutrality, keeps all figures intact, and undergoes per-language neutrality review before publication.",
+  "acceptanceCriteria": [
+    "Internationalization infrastructure implemented: explainer templates support multiple languages without structural changes to the cite-and-reconcile pipeline",
+    "Community translation workflow documented: translators receive source English explainer plus neutrality policy and figure-preservation rules",
+    "Each translation undergoes an independent per-language neutrality review before publication; framing drift from the English source is treated as a neutrality failure",
+    "All figures in translations match the English source exactly (no independent figure translation); translations preserve the 'describes published open data; not advice; not an audit' label in the target language",
+    "Only started after pilot English explainers are stable and a per-language review process is in place"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "Community translations of pilot jurisdiction explainers with internationalization infrastructure, per-language neutrality review, and figure-preservation verification — delivered under CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

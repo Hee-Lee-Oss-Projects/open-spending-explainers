@@ -1,0 +1,32 @@
+{
+  "id": "open-spending-explainers-eval-015",
+  "title": "Full eval: grounded+cited+neutral vs. blank-slate (accuracy/citation/neutrality)",
+  "project": "open-spending-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "After the pilot jurisdiction's budget and contracts explainers are live, the full eval harness tests the core thesis of Open-Spending-Explainers: that grounded, cited, neutral generation clearly beats a blank-slate 'summarize this budget' baseline on accuracy, citation coverage, and neutrality. This is the M4 gate — if the grounded approach does not clearly beat the baseline, the thesis is flagged as failing and the project reassesses before further investment. This is the full version of the minimal kill-gate eval (task 029). Depends on template-010, contracts-012, context-013, and eval-029.",
+  "objective": "Implement and run the full eval harness that compares grounded+cited+neutral generation against a blank-slate baseline on a comprehensive fixture set — using an LLM judge to score accuracy, citation coverage, and neutrality — and records the delta as the M4 go/no-go. If grounded does not clearly beat blank-slate, the thesis is flagged as failing.",
+  "acceptanceCriteria": [
+    "Runs explainers grounded+cited+neutral versus blank-slate 'summarize this budget' baseline on a comprehensive fixture set covering budget and contracts scenarios",
+    "An LLM judge scores accuracy, citation coverage, and neutrality for both approaches and reports the delta",
+    "Grounded+cited+neutral must clearly beat blank-slate on all three dimensions (accuracy, citation coverage, neutrality); if not, the thesis is flagged as failing and the project reassesses before M5",
+    "Eval results are recorded and referenced as the M4 Definition of Done gate",
+    "Reviewed and signed off by the maintainer and neutrality reviewer; PR merged with green CI"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR containing the full eval harness (scripts/eval-explainer.ts) comparing grounded+cited+neutral versus blank-slate generation with an LLM judge scoring accuracy, citation coverage, and neutrality — the M4 thesis-validation gate.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

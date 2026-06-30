@@ -1,0 +1,32 @@
+{
+  "id": "open-spending-explainers-jurisdiction-020",
+  "title": "Second jurisdiction content pack",
+  "project": "open-spending-explainers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["civic", "open-data", "public-finance", "transparency"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "After the pilot jurisdiction is stable and the M6 maintenance cadence is in place, the project may expand to a second jurisdiction. This is a backlog item gated on M6 completion and the expert-gated, license-verified process established in ops-019. It requires full license-vetting, snapshot pinning, and public-finance expert sign-off for the second jurisdiction's sources, following the same process as the pilot. This task must not be started until the first jurisdiction is stable.",
+  "objective": "Identify, vet, snapshot, and generate the content pack for a second pilot jurisdiction following the same license-verification, snapshot-pinning, reconciliation, citation, neutrality, and expert-review process as the first jurisdiction — only after M6 is stable.",
+  "acceptanceCriteria": [
+    "Only started after M6 (ops-019) is complete and the pilot jurisdiction is stable",
+    "Full license-vetting per source: only open/PD/CC/open-gov licensed sources that permit derivatives enabled; no proprietary or paywalled data",
+    "Snapshot pinned (sha256) and full provenance recorded for all second-jurisdiction sources",
+    "Public-finance expert sign-off recorded for the second jurisdiction, snapshot-scoped",
+    "Content pack (dataset) produced following the same reconciliation, citation-coverage, neutrality-lint, and expert-review gates as the pilot"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A second-jurisdiction content pack (dataset) with license-verified, checksummed sources, full provenance, public-finance expert sign-off, and reconciled/cited/neutrality-passed content following the same gates as the pilot jurisdiction.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "open-spending-explainers-ingest-006",
+  "title": "Budget ingestion + normalization pipeline with checksummed source snapshots",
+  "project": "open-spending-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "The reproducibility and numeric-fidelity guarantees of Open-Spending-Explainers depend on pinning a checksummed snapshot of each source at ingest time. All downstream artifacts (reconciliation, citation, explainer generation) trace back to that snapshot. The ingestion pipeline must normalize open budget data from OpenSpending, government open-data portals, and CSV/Excel/JSON files to the normalized data model (task 005), distinguish revenue from expenditure and budgeted from actual, and pass through the license/provenance gate (task 004). Depends on license-004 and schema-005.",
+  "objective": "Implement the budget ingestion and normalization pipeline (lib/ingest) that pulls open budget data from OpenSpending, government open-data portals, and CSV/Excel/JSON files; normalizes it to the BudgetLine data model; distinguishes revenue/expenditure and budgeted/actual/adjusted; records full provenance via the license gate; and pins a sha256-checksummed snapshot of each source so all downstream artifacts are reproducible.",
+  "acceptanceCriteria": [
+    "Pulls open budget data from OpenSpending, government open-data portals, and CSV/Excel/JSON file formats and normalizes to the BudgetLine data model defined in schema-005",
+    "Distinguishes revenue from expenditure (kind field) and budgeted from actual from adjusted (basis field); never conflates appropriation with expenditure",
+    "Pins a checksummed (sha256) snapshot of each source at ingest time; all downstream artifacts reference the snapshot checksum and are reproducible from it",
+    "Passes every source through the license/provenance gate (task 004) before ingest; provenance recorded via the gate module",
+    "Optional COFOG functional-category mapping is recorded where applied and is not silently assumed",
+    "Tested on fixtures covering the supported input formats; PR merged with green CI and maintainer plus public-finance expert review passed"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR containing the budget ingestion and normalization pipeline (lib/ingest) with sha256 snapshot pinning, provenance recording via the license gate, support for OpenSpending/portal/CSV/Excel/JSON inputs, and fixture-tested normalization to the BudgetLine data model.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

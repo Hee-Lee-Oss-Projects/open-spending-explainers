@@ -1,0 +1,33 @@
+{
+  "id": "open-spending-explainers-reconcile-007",
+  "title": "Numeric-fidelity / reconciliation engine + citation-coverage (\"no source, no figure\")",
+  "project": "open-spending-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Numeric fidelity is non-negotiable in Open-Spending-Explainers. A wrong figure in a budget explainer is actively harmful and erodes public trust. Every figure in an explainer must resolve to a citation pointing at a pinned source snapshot line item, and component figures must reconcile to stated totals within a disclosed rounding tolerance. Headline totals must match exactly. A non-reconciling or uncited figure must fail CI and cannot ship. Depends on ingest-006 (pipeline with checksummed snapshots).",
+  "objective": "Implement the numeric-fidelity and reconciliation engine (lib/reconcile) that enforces two invariants: (1) citation coverage — every quantitative claim in an explainer must carry a resolving citation to a snapshot line item (no source, no figure); and (2) reconciliation — component figures sum to stated totals within a disclosed rounding tolerance, with headline totals matching exactly. Non-reconciling or uncited figures must fail CI.",
+  "acceptanceCriteria": [
+    "Every figure in an explainer output must resolve to a citation pointing at a snapshot line item; a citation-coverage test enforces this with a build failure on any uncited figure",
+    "Component figures reconcile to stated totals within a disclosed rounding tolerance; headline totals must match exactly; a non-reconciling figure fails CI",
+    "Never conflates budgeted with actual; mismatches between basis fields surface as explicit CI failures rather than silent coercion",
+    "Reconciliation is run in CI as a release gate; any figure that does not reconcile or resolve cannot ship",
+    "DuckDB used for in-process tabular reconciliation and aggregation as specified in PLAN.md architecture",
+    "Tested on fixtures including reconciling cases, non-reconciling cases, and uncited-figure cases; PR merged with green CI and maintainer review passed"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR containing the reconciliation and citation-coverage engine (lib/reconcile) that enforces citation coverage and numeric reconciliation as CI release gates, using DuckDB for in-process aggregation — the gate that ensures every shipped figure is sourced and reconciled.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

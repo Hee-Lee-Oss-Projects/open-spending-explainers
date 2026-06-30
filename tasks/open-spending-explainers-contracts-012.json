@@ -1,0 +1,33 @@
+{
+  "id": "open-spending-explainers-contracts-012",
+  "title": "OCDS contracts ingestion + explainer module (entity-level, PII-screened)",
+  "project": "open-spending-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Public contracts data, published under the Open Contracting Data Standard (OCDS), must be ingested with per-publisher license verification (OCDS is a format, not a license) and the PII entity-vs-person screen applied before any contracts explainer is generated. Contracts explainers describe buyers, supplier entities, values, and categories — entity-level only, with no allegations of impropriety for any named vendor or official. This module extends the pipeline to the contracts domain. Depends on pii-008 and template-010.",
+  "objective": "Implement the OCDS contracts ingestion and explainer module that ingests OCDS releases (with per-publisher license verification), normalizes to the Contract data model, applies the PII entity-vs-person screen, and generates contracts explainers describing buyers, supplier entities, values, and categories at entity-level only — with no allegations of impropriety — passing the neutrality lint, reconciliation gate, and citation-coverage gate before review.",
+  "acceptanceCriteria": [
+    "Ingests OCDS releases with per-publisher license verification (not blanket OCDS format assumption); only license-clean sources are enabled",
+    "Normalizes OCDS data to the Contract data model (task 005): ocid, sourceId, jurisdiction, buyer, supplierEntity, supplierIsEntity, value, currency, awardDate, category, status",
+    "PII entity-vs-person screen (task 008) applied; entity-level output only; private-individual personal data redacted or withheld",
+    "Generated contracts explainers describe buyers, supplier entities, values, and categories — no allegations of impropriety, fraud, or corruption against any named vendor or official",
+    "Figures reconcile; citations resolve to snapshot line items; neutrality lint passes",
+    "Public-finance expert sign-off recorded for contracts content; PR merged with green CI and maintainer plus neutrality reviewer review passed"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR containing the OCDS contracts ingestion and explainer module: per-publisher license verification, Contract data model normalization, PII screening, and entity-level-only neutrality-passing contracts explainer generation — all behind the reconciliation and citation-coverage gates.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

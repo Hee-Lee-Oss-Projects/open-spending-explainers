@@ -1,0 +1,33 @@
+{
+  "id": "open-spending-explainers-license-004",
+  "title": "License/provenance gate (fail-closed; per-source verification + provenance manifest)",
+  "project": "open-spending-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "governance", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Open-Spending-Explainers uses only open/PD/CC/open-gov-licensed data. Ingesting a source with an unverified or incompatible license would violate reuse terms and undermine the project's legal and ethical foundations. The license/provenance gate is a hard product requirement built before any source is ingested. It must be fail-closed: no verified license means no ingest. OSM/ODbL-derived geodata requires special isolation from the CC-BY corpus. Depends on repo-002 (skeleton).",
+  "objective": "Implement the license/provenance gate module (lib/provenance) as specified in PLAN.md: fail-closed per-source license verification, full provenance record per source (publisher, jurisdiction, dataset name, URL, retrieval date, sha256 snapshot checksum, license, permits-derivatives flag, legal-status note), a provenance manifest emitted alongside each dataset, and ODbL/OSM isolation handling.",
+  "acceptanceCriteria": [
+    "Fail-closed: any source without a verified open/PD/CC/open-gov reuse-and-derivatives license is rejected at ingest; no proprietary, access-controlled, or paywalled sources are accepted",
+    "Records full provenance per source: publisher, jurisdiction, dataset name, URL, retrieval date, sha256 snapshot checksum, license, permits-derivatives flag, and legal-status note",
+    "Emits a provenance manifest alongside each dataset/explainer companion, listing all sources with their provenance records",
+    "OSM/ODbL handling: any OSM-derived geodata is tagged ODbL, isolated from the CC-BY corpus, and attributed; the gate is tested for ODbL isolation",
+    "Per-publisher OCDS license verification is implemented (OCDS is a format, not a license; each publisher's terms are checked individually)",
+    "Gate is tested with fixtures covering accepted and rejected sources; PR merged with green CI and maintainer plus public-finance expert review passed"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR containing the license/provenance gate module (lib/provenance) with fail-closed per-source verification, full provenance record and manifest emission, ODbL/OSM isolation, and tests — the gate that all ingest tasks must pass through before any source enters the pipeline.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

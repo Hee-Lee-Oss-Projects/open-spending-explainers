@@ -1,0 +1,33 @@
+{
+  "id": "open-spending-explainers-template-010",
+  "title": "Explainer template + grounded generation (cited to line items, neutrality-passing)",
+  "project": "open-spending-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "The explainer generator is the LLM-driven component that turns normalized, provenance-tracked budget data into plain-language explainers. The template enforces complete, structured coverage to prevent editorializing-by-citation-choice (a key insider-misuse vector). Every output must emit inline citations to snapshot line items and pass both the neutrality lint (task 003) and the reconciliation engine (task 007) before reaching review. This implements the lib/explainer component from PLAN.md. Depends on neutrality-003 and reconcile-007.",
+  "objective": "Implement the explainer template and grounded-generation module (lib/explainer) that uses a topic template to drive LLM generation from normalized snapshot data, emits inline citations to snapshot line items, enforces complete structured coverage (what this is, revenue, expenditure, fiscal context, data limits, how to read this, verify it yourself), and passes the neutrality lint and reconciliation gate before any draft reaches review.",
+  "acceptanceCriteria": [
+    "Template enforces complete, structured coverage: what this is; where the money comes from (revenue); where it goes (expenditure); fiscal context (FY, nominal/real with named deflator and base year, budgeted/actual, fund accounting, data limits/caveats); how to read this; verify it yourself (link to companion dataset) — preventing editorializing-by-citation-choice",
+    "Generation emits inline citations to snapshot line items for every quantitative claim; output must pass the citation-coverage gate (task 007)",
+    "Output must pass the neutrality lint (task 003) before review is triggered; ambiguous framing routes to human review, never auto-passes",
+    "Output must pass the reconciliation engine (task 007) before review; uncited or non-reconciling figures block the PR",
+    "Template injects the NEUTRALITY_SYSTEM charter into every generation prompt as the draft-time enforcement point",
+    "Reviewed and signed off by the neutrality reviewer and maintainer; PR merged with green CI"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR containing the explainer template and grounded-generation module (lib/explainer) that drives LLM drafting from normalized snapshot data with inline citations, enforces complete structured coverage, and gates every output through the neutrality lint and reconciliation engine before review.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

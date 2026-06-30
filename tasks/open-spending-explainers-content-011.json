@@ -1,0 +1,33 @@
+{
+  "id": "open-spending-explainers-content-011",
+  "title": "Pilot jurisdiction budget explainer content (reconciled, cited, expert-reviewed)",
+  "project": "open-spending-explainers",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "education"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "This is the first content artifact of Open-Spending-Explainers: the pilot jurisdiction's budget explainer generated from a license-verified, checksummed snapshot, fully reconciled, 100% cited, and passed through the neutrality lint. It cannot ship until a public-finance expert has signed off (snapshot-scoped) and an independent neutrality reviewer has approved the framing. This is MEDIUM risk-tier content requiring both expert and neutrality review before delivery. The explainer is also the input for the M2 confirmation of the minimal kill-gate eval (eval-029 run on real cited content). Depends on sources-009 and template-010.",
+  "objective": "Generate, reconcile, cite, and shepherd through expert and neutrality review the pilot jurisdiction's budget explainer: a plain-language document explaining the jurisdiction's public budget — where the money comes from, where it goes, and the fiscal context — derived entirely from the license-verified, checksummed snapshot, with all figures reconciled to source and 100% cited, passing the neutrality lint, and carrying public-finance expert sign-off before publish.",
+  "acceptanceCriteria": [
+    "All figures reconcile to the pinned snapshot (headline totals exact; component figures within the disclosed rounding tolerance); 0 unreconciled figures",
+    "100% citation coverage: every quantitative claim carries a resolvable citation to a snapshot line item; 0 uncited figures",
+    "Neutrality lint passes; no evaluative, advocacy, allegation, or election framing; labeled 'describes published open data; not financial/legal advice; not an audit'",
+    "Plain-language reading-level and accessibility targets met (WCAG 2.2 AA and the plain-language reading-level target from PLAN.md)",
+    "Public-finance expert sign-off recorded (snapshot/checksum-scoped) and independent neutrality review passed before content is published",
+    "Minimal kill-gate eval (task 029) confirmed on the real cited content — grounded+cited+neutral still trends ahead of baseline; if not, content investment pauses for reassessment"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A reviewed and expert-signed-off pilot jurisdiction budget explainer document: reconciled, 100% cited, neutrality-passed, accessibility-compliant, and labeled as open-data description — the first M2 content artifact and the input for M3 contracts and publishing tasks.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
