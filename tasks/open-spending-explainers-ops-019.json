@@ -1,0 +1,32 @@
+{
+  "id": "open-spending-explainers-ops-019",
+  "title": "Ops runbook + outcome tracking + maintenance rotation + annual fiscal-year refresh cadence",
+  "project": "open-spending-explainers",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "governance"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "After the project ships to a real partner (task 018), it must be sustainably maintained. Budget and contract data is annual; each fiscal year requires a new snapshot, re-reconciliation, re-review, and the prior explainer to be bannered as superseded. The project needs a named maintenance rotation, an ops runbook, outcome tracking (partner use and comprehension instances, not page views), and a documented, expert-gated process for adding a second jurisdiction. Depends on handoff-018.",
+  "objective": "Write the ops runbook and establish outcome tracking, maintenance rotation, and annual fiscal-year refresh cadence for Open-Spending-Explainers after M5 delivery.",
+  "acceptanceCriteria": [
+    "Runbook covers deploy, source re-ingest, snapshot re-verification, and partner support procedures",
+    "Outcome tracking records partner/audience use, documented comprehension instances, and corrections issued — not page views — and is reported on a regular cadence",
+    "Named maintenance rotation documented with at least one named owner",
+    "Annual fiscal-year refresh cadence documented: new snapshot ingested, reconciled, re-reviewed (expert-gated, license-verified), and prior explainer auto-bannered as superseded with link to current",
+    "Documented, expert-gated, license-verified process for adding a second jurisdiction — only after the first is stable"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "An ops runbook document covering deploy, re-ingest, snapshot re-verification, partner support, outcome tracking, maintenance rotation, annual fiscal-year refresh cadence, and the gated process for adding a second jurisdiction — the M6 sustainability foundation.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

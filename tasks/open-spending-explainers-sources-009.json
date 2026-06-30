@@ -1,0 +1,32 @@
+{
+  "id": "open-spending-explainers-sources-009",
+  "title": "Pilot jurisdiction budget source vetting (license verified) + snapshot + provenance",
+  "project": "open-spending-explainers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["civic", "open-data", "public-finance", "transparency"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Before any pilot-jurisdiction budget explainer can be generated, the budget sources for that jurisdiction must be identified, license-verified, snapshotted, and their provenance recorded. This is a data task that gates all M2 content work. It depends on the pilot jurisdiction selection (task 000, which is TO BE SECURED until the jurisdiction is decided by 2026-08-31), the license/provenance gate (task 004), and the ingest pipeline (task 006). No budget explainer can be generated from an unverified source. Expert sign-off must be recorded before sources are enabled.",
+  "objective": "Identify, vet, snapshot, and record full provenance for the pilot jurisdiction's open budget data sources — verifying that each source carries an open/PD/CC/open-gov reuse-and-derivatives license, pinning a sha256-checksummed snapshot, and recording full provenance — so that budget explainer generation (task 011) has a license-clean, reproducible input.",
+  "acceptanceCriteria": [
+    "Reuse terms verified and recorded per source: only open/PD/CC/open-gov licensed sources that permit derivatives are enabled; no proprietary or paywalled data included",
+    "Snapshot pinned (sha256) and full provenance recorded for each source: publisher, citation, URL, retrieval date, license, legal-status note, and permits-derivatives flag",
+    "Sources passed through the license/provenance gate (task 004) and provenance manifest emitted",
+    "Public-finance expert sign-off recorded before sources are enabled, scoped to the dataset snapshot and checksum",
+    "Dataset output is a provenance manifest listing all enabled sources with their provenance records"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A provenance manifest (dataset) listing all enabled pilot-jurisdiction budget sources with verified licenses, sha256-checksummed snapshots, full provenance records, and recorded public-finance expert sign-off — the license-clean, reproducible input for budget explainer generation.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

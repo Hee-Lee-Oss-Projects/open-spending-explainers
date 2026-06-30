@@ -1,0 +1,34 @@
+{
+  "id": "open-spending-explainers-expert-review-024",
+  "title": "Funded expert-review-hours engagement (hard budget cap)",
+  "project": "open-spending-explainers",
+  "type": "research",
+  "lane": "funded",
+  "priority": "low",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "governance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Content tasks (M2 onwards) require sign-off from a credentialed public-finance or governmental-accounting expert before any explainer ships. Volunteer expert time may not always be available; this funded task covers a metered expert-review-hours engagement under a hard budget cap, using donor escrow funds via the Elyos funded lane. Reviewer independence must be preserved: the expert holds a veto on content accuracy and fairness, and must recuse from jurisdictions where they have a material financial or political interest. This is a future backlog item for when volunteer review is unavailable.",
+  "objective": "Engage a credentialed public-finance or governmental-accounting expert reviewer under a funded, hard-budget-capped arrangement via the Elyos funded lane to provide snapshot-scoped sign-off on pilot jurisdiction budget and contracts explainer content.",
+  "acceptanceCriteria": [
+    "Engagement conducted under the Elyos funded lane with a hard budget cap (fundedBudgetUsd) that is never exceeded",
+    "Reviewer is a credentialed public-finance professional, governmental accountant, or public-administration academic; credentials recorded in the reviewers ledger",
+    "Reviewer independence preserved: no material financial or political interest in the reviewed jurisdiction; COI declaration recorded",
+    "Expert sign-off scoped to the specific dataset snapshot and checksum reviewed; does not carry forward to new snapshots",
+    "Name-use limited to versions the expert approved; no implied endorsement of unreviewed content",
+    "Outcome documented: which content was reviewed, expert sign-off recorded, any required corrections logged"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A document recording the funded expert review engagement: reviewer credentials, COI declaration, scope (snapshot and checksum), sign-off or required corrections, and cost ledger entry within the hard budget cap.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0",
+  "fundedBudgetUsd": 500
+}

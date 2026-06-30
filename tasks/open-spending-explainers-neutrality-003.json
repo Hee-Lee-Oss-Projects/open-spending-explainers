@@ -1,0 +1,33 @@
+{
+  "id": "open-spending-explainers-neutrality-003",
+  "title": "Neutrality lint (banned-framing lexicon + comparative/blame/CTA/allegation detectors) wired into CI",
+  "project": "open-spending-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "governance", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Neutrality is a safety property, not a tone. An explainer that editorializes causes harm even if every number is correct. The non-partisan editorial policy (task 001) defines the banned-framing taxonomy; this task implements it as a deterministic CI lint that fails the build on any editorializing language and is fail-closed (ambiguous framing routes to human review, never auto-passes). The lint must be in place before any explainer content is generated. Depends on editorial-001 (policy spec) and repo-002 (skeleton).",
+  "objective": "Implement the neutrality lint module (lib/editorial) as specified by the editorial policy (task 001): deterministic checks for every banned-framing category, a fail-closed design (ambiguous framing fails the build and routes to human review), an editorial red-team test suite with at least 8 cases per banned-framing category including insider-misuse vectors, and the suite wired into CI so every PR is checked.",
+  "acceptanceCriteria": [
+    "Implements deterministic checks for every banned-framing category defined in editorial-001: loaded lexicon, loaded comparatives, causal-blame, selective-omission/cherry-picking, allegation-by-implication, and election/ballot/campaign framing",
+    "A lint failure fails the build; fail-closed design: ambiguous framing is flagged for human review and never auto-passed",
+    "Ships an editorial red-team test suite with at least 8 cases per banned-framing category plus insider-misuse vectors (framing smuggling, editorializing-by-citation-choice, comparison gaming); suite runs in CI",
+    "Suite size is non-decreasing: any newly found editorializing pattern must be added as a regression case within one release; CI enforces suite-count check",
+    "Reports the metric as passed/total at version N with a per-version changelog; target is 100% pass/redirect",
+    "Reviewed and signed off by the neutrality reviewer; PR merged with green CI and maintainer review passed"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR containing the neutrality lint module (lib/editorial) with deterministic banned-framing detectors, a fail-closed CI gate, and an editorial red-team suite (at least 8 cases per category including insider-misuse vectors) — the enforcement mechanism that every subsequent explainer-generation task must pass.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

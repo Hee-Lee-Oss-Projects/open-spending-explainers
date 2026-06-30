@@ -1,0 +1,33 @@
+{
+  "id": "open-spending-explainers-literacy-023",
+  "title": "\"How to read a public budget\" companion (neutral fiscal literacy)",
+  "project": "open-spending-explainers",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Many readers of budget explainers benefit from a brief companion document explaining general public-budget concepts: fund accounting, the difference between budgeted and actual figures, fiscal years, nominal versus real, and how to navigate a government budget document. This is a neutral, educational, product-neutral companion — it does not advise on policy choices, advocate any position, or provide financial/legal advice. It is a backlog item for after the pilot explainers are stable.",
+  "objective": "Write a neutral, plain-language 'how to read a public budget' companion document that explains key public-budget concepts (fund accounting, budgeted vs actual, fiscal years, nominal vs real) in a product-neutral, non-advisory, non-advocacy way.",
+  "acceptanceCriteria": [
+    "Explains key public-budget concepts: fund accounting, budgeted vs actual vs adjusted, fiscal years, nominal vs real (with a named example of how deflators work), and how to navigate a government budget document",
+    "Strictly neutral and educational: product-neutral, no advocacy, no advice, no calls-to-action, no policy recommendations",
+    "Not financial, legal, or investment advice of any kind; clearly labeled as educational context",
+    "Plain-language reading-level appropriate for a general resident audience",
+    "WCAG 2.2 AA accessibility compliance",
+    "Reviewed and signed off by the maintainer; neutral reviewer review recommended"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A neutral, plain-language 'how to read a public budget' companion document covering key public-finance concepts — educational, product-neutral, non-advisory, accessible, and CC-BY-4.0 licensed.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

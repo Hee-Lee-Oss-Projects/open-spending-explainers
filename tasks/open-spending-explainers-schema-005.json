@@ -1,0 +1,33 @@
+{
+  "id": "open-spending-explainers-schema-005",
+  "title": "Normalized data model (Source/BudgetLine/Contract) + Frictionless Tabular Data Package",
+  "project": "open-spending-explainers",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "software"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Before the ingestion pipeline (task 006) can normalize budget and contracts data, the data model must be specified and agreed upon. The normalized model (Source, BudgetLine, Contract, Explainer) must capture provenance, fund-accounting distinctions (revenue/expenditure, budgeted/actual/adjusted), COFOG optional mapping, and the OCDS-aligned Contract structure. It must also specify how a Frictionless Tabular Data Package is produced alongside each explainer so recipients can verify and reuse the numbers. Depends on repo-002 (skeleton).",
+  "objective": "Write the normalized data model specification for Open-Spending-Explainers covering the Source, BudgetLine, Contract, and Explainer entities, and specify the Frictionless Tabular Data Package structure that ships alongside each explainer as a machine-readable companion dataset.",
+  "acceptanceCriteria": [
+    "Specifies the Source entity: id, publisher, jurisdiction, datasetName, url, retrievalDate, snapshotChecksum, license, permitsDerivatives, legalStatusNote",
+    "Specifies the BudgetLine entity: sourceId, jurisdiction, fiscalYear, fund, function (COFOG optional), program, kind (revenue|expenditure), basis (budgeted|actual|adjusted), amountNominal, currency, amountReal (optional), deflator (optional), baseYear (optional)",
+    "Specifies the Contract entity (OCDS-aligned): ocid, sourceId, jurisdiction, buyer, supplierEntity, supplierIsEntity (boolean), value, currency, awardDate, category (CPV/COFOG optional), status",
+    "Specifies the Explainer entity: jurisdiction, fiscalYear, topic, body, citations array, snapshotChecksum, templateVersion, reviewStatus, expertSignoffRef, validUntil",
+    "Specifies the Frictionless Tabular Data Package structure and field descriptors for each entity so the companion dataset is self-describing and independently verifiable",
+    "Document reviewed and signed off by the maintainer"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A data model specification document defining the Source, BudgetLine, Contract, and Explainer entities plus the Frictionless Tabular Data Package structure — the schema that ingest-006, reconcile-007, pii-008, and all content tasks implement against.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

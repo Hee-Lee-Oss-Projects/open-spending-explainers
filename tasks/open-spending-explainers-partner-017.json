@@ -1,0 +1,32 @@
+{
+  "id": "open-spending-explainers-partner-017",
+  "title": "Secure distribution partner/steward + independent neutrality audit + expert sign-off of shipped content",
+  "project": "open-spending-explainers",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "governance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Open-Spending-Explainers is not shipped on publish; it is shipped only when a real partner/audience adopts the explainers and residents/journalists/officials actually understand public money better. No partner or audience is yet secured. A dated acquisition plan sets 2026-12-31 as the partner deadline. If no partner is secured by approximately 2027-03-31, the project applies the build-vs-mothball/pivot decision rule. This task drives partner outreach, secures a steward, and obtains an independent neutrality audit and snapshot-scoped expert sign-off on all shipped content. Depends on content-011, contracts-012, eval-015, and hardening-016.",
+  "objective": "Secure a real distribution partner/steward (newsroom/library/open-data office/civic-tech org/policy program) for the pilot jurisdiction's explainers, obtain an independent neutrality audit of all shipped framing, confirm snapshot-scoped public-finance expert sign-off on all shipped content, and record the acquisition against the dated plan. This flips verifiedNeed to true once a real partner is confirmed.",
+  "acceptanceCriteria": [
+    "A real partner/audience (newsroom/library/open-data office/civic-tech org/policy program) secured for the pilot jurisdiction; steward assigned; verifiedNeed flips to true",
+    "Independent neutrality reviewer audits framing of all shipped content; all content passes independent neutrality review",
+    "All shipped content has snapshot-scoped public-finance expert sign-off recorded; all figures reconciled and cited; all sources license-verified",
+    "Partner acquisition recorded against the dated plan (jurisdiction by 2026-08-31, expert by 2026-10-31, partner by 2026-12-31)",
+    "If no partner is secured by approximately 2027-03-31, the build-vs-mothball/pivot decision rule is applied: pivot the last-mile beneficiary (e.g., journalism school/library teaching deed) or mothball, recorded in governance — not publishing to no one"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A partner-acquisition and audit document recording the secured distribution partner/steward, independent neutrality audit results, snapshot-scoped expert sign-off on all shipped content, and (if applicable) the build-vs-mothball/pivot decision — the M5 gate before the handoff deed.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

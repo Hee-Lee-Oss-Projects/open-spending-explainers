@@ -1,0 +1,33 @@
+{
+  "id": "open-spending-explainers-comparability-025",
+  "title": "COFOG-normalized cross-jurisdiction comparison (only where valid)",
+  "project": "open-spending-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Cross-jurisdiction budget comparisons are misleading when accounting bases (GASB vs IPSAS), fiscal years, or nominal/real bases differ. COFOG (UN Classification of the Functions of Government) provides a principled functional-category framework that enables valid comparisons across jurisdictions — but only where the mapping is valid and the bases align. This backlog task extends the pipeline to support COFOG-normalized cross-jurisdiction comparisons behind the comparison guardrails (task 013), publishing only when bases are confirmed compatible.",
+  "objective": "Implement COFOG-normalized cross-jurisdiction budget comparison support behind the comparison guardrails, so that comparisons are only published when accounting bases, fiscal years, and nominal/real bases are confirmed compatible — and blocked or annotated otherwise.",
+  "acceptanceCriteria": [
+    "COFOG functional-category normalization implemented for budget lines where COFOG mapping is valid and recorded",
+    "Cross-jurisdiction comparisons using COFOG normalization are only published when accounting bases (e.g., GASB vs IPSAS), fiscal years, and nominal/real bases are confirmed compatible by the comparison guardrails (task 013)",
+    "Comparisons blocked or annotated when bases are incompatible; no comparison is silently published across mismatched accounting bases",
+    "COFOG mapping is recorded as provenance (which lines were mapped, which standard version) and is not silently assumed",
+    "Tested on fixtures covering valid and invalid cross-jurisdiction comparison scenarios",
+    "Reviewed and signed off by the public-finance expert; PR merged with green CI and maintainer review passed"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR adding COFOG-normalized cross-jurisdiction comparison support behind the comparison guardrails, with COFOG mapping recorded as provenance and comparisons published only where bases are confirmed compatible.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

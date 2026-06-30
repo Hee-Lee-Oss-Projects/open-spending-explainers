@@ -1,0 +1,31 @@
+{
+  "id": "open-spending-explainers-jurisdiction-000",
+  "title": "Pilot jurisdiction selection (scored against explicit criteria) — gates M2–M6",
+  "project": "open-spending-explainers",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "governance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Open-Spending-Explainers will publish plain-language, source-cited budget and contracts explainers for one pilot jurisdiction at a time. The pilot jurisdiction must be chosen before M1 content work begins because it fixes the source corpus, the source-reuse licensing reality, and the reviewer profile. Without a chosen jurisdiction, no budget or contracts source can be vetted, snapshotted, or ingested. The decision rule and deadline (2026-08-31) are fixed even though the specific jurisdiction is TO BE SECURED. This task is a hard gate on M2–M6.",
+  "objective": "Research, score, and record the selection of the pilot jurisdiction against the five explicit criteria (open licensed data available, data quality/completeness, available public-finance reviewer, plausible distribution partner/audience, manageable accounting complexity), and either confirm the chosen jurisdiction or produce a shortlist with a fixed decision deadline of 2026-08-31.",
+  "acceptanceCriteria": [
+    "Scores candidate jurisdictions against all five explicit criteria: (1) open/reuse-and-derivatives-licensed budget and OCDS contract data actually available and machine-readable; (2) data quality/completeness — reconcilable line items, documented fund structure; (3) an available credentialed public-finance reviewer for that jurisdiction; (4) a plausible distribution partner or audience (newsroom/library/open-data office/civic-tech org); (5) manageable accounting complexity for a first build",
+    "Records the decision — either a confirmed pilot jurisdiction with rationale, or a shortlist with the fixed decision deadline of 2026-08-31 — in a document that becomes the dependency artifact for M2–M6",
+    "Documents which jurisdictions were considered and why each was accepted or rejected against the criteria",
+    "Reviewed and signed off by the maintainer and noted for public-finance expert review once one is secured"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A scored jurisdiction-selection document recording the pilot jurisdiction decision (or shortlist + decision deadline), candidate scoring against all five criteria, and the rationale — the artifact that M2–M6 source-vetting, ingestion, and content tasks depend on.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

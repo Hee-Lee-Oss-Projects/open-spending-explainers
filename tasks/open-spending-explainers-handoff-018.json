@@ -1,0 +1,32 @@
+{
+  "id": "open-spending-explainers-handoff-018",
+  "title": "Partner adoption: explainers used/published; at least 1 documented beneficiary comprehension instance",
+  "project": "open-spending-explainers",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["civic", "open-data", "public-finance", "transparency", "governance", "education"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The project is not shipped until real people use the explainers to understand public money. Partner adoption (task 017) secures the partner; this task confirms the closed loop: the partner demonstrably uses or publishes the explainers, and at least one resident, journalist, or official understands a public budget or contracts dataset better as a result — recorded with attestation. This is the project-level Definition of Shipped. Depends on partner-017.",
+  "objective": "Confirm and document that the secured distribution partner uses or publishes the pilot jurisdiction's explainers, and record at least one documented instance of a resident, journalist, or official understanding the budget or contracts data better as a result — with neutrality independently verified and numeric fidelity upheld throughout.",
+  "acceptanceCriteria": [
+    "The secured partner demonstrably uses or publishes the pilot jurisdiction explainers (confirmed use, not just distribution intent)",
+    "At least 1 documented instance of a resident, journalist, or official using an explainer to understand the public budget or contracts better, recorded with attestation",
+    "Neutrality independently verified through the full published lifecycle; 'not advice / not an audit' framing intact throughout",
+    "Numeric fidelity upheld: all figures reconciled and cited in published versions; no uncited or unreconciled figures in the public artifact",
+    "Beneficiary outcome documented (partner/audience use plus comprehension instance) as the project-level Definition of Shipped"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A handoff and outcome document recording confirmed partner/audience use of the explainers, at least one documented beneficiary comprehension instance with attestation, neutrality verification through the published lifecycle, and numeric fidelity confirmation — the project-level Definition of Shipped.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
