@@ -224,11 +224,11 @@ what the data shows and states its limits, rather than answering the evaluative 
 
 ## Solution approach & architecture
 
-**Stack.** TypeScript, ESM, pnpm workspaces (Elyos convention). Node data pipeline; DuckDB for
+**Stack.** TypeScript, ESM, pnpm workspaces (Hee-Lee Oss convention). Node data pipeline; DuckDB for
 in-process tabular reconciliation/aggregation; Frictionless **Tabular Data Package** for the
 machine-readable companion dataset. Static publishing via a static-site generator (Astro/Eleventy)
 for accessible, fast, offline-friendly explainers. Anthropic Claude as the drafting layer **behind a
-thin provider-neutral LLM client** so the agent-neutral core stays vendor-neutral (Elyos core/adapter
+thin provider-neutral LLM client** so the agent-neutral core stays vendor-neutral (Hee-Lee Oss core/adapter
 rule; model selection + pricing per the Claude API skill). Code license **MIT**; content + datasets
 **CC-BY-4.0** (with **ODbL** isolation where any OSM-derived geodata is used — see *Data, licensing*).
 
@@ -274,7 +274,7 @@ rule; model selection + pricing per the Claude API skill). Code license **MIT**;
 6. **PII screen (`lib/pii`).** Classifies contract parties as **entity vs natural person**; default is
    entity/aggregate-level only. Personal data of private individuals (e.g., a sole proprietor's home
    address, personal identifiers) is redacted/withheld; the project surfaces aggregate or
-   entity-level facts, consistent with Elyos's privacy guardrail (aggregate/de-identified; deceased or
+   entity-level facts, consistent with Hee-Lee Oss's privacy guardrail (aggregate/de-identified; deceased or
    non-personal only).
 
 7. **Explainer generator (`lib/explainer`).** LLM drafts a plain-language explainer from the
@@ -361,10 +361,10 @@ labeled.
 private individuals. Aggregate/entity-level only. Contract data can name **natural persons** (sole
 proprietors, named officials); the PII screen classifies entity-vs-person and **redacts/withholds
 personal data of private individuals** (personal addresses, personal identifiers). Consistent with
-Elyos guardrails, only aggregate/de-identified or non-personal (entity/public-record) data is
+Hee-Lee Oss guardrails, only aggregate/de-identified or non-personal (entity/public-record) data is
 surfaced; no profiling, no targeting, no voter-data linkage. **No allegations** about any named person
 or entity — the project reports neutral, data-backed facts only, mitigating defamation risk. No
-secrets/tokens/PII in logs, receipts, or committed files (Elyos rule).
+secrets/tokens/PII in logs, receipts, or committed files (Hee-Lee Oss rule).
 
 **Corrections.** A public **erratum policy + changelog**: any figure error is corrected, logged, and
 the affected explainer + dataset re-issued within the correction SLA, with the change visible.
@@ -464,7 +464,7 @@ blocks on a secured distribution partner/audience.
 ## Work breakdown
 
 The itemized, schema-mapped backlog lives in **`TASKS.md`**: ~20 tasks across M0–M6 plus a future
-backlog, each mapped to the Elyos Task JSON schema, with per-task acceptance criteria for the most
+backlog, each mapped to the Hee-Lee Oss Task JSON schema, with per-task acceptance criteria for the most
 important items, milestone Definitions of Done, and a complete example Task JSON for the first M0
 hard-requirement task (the non-partisan editorial policy spec). The first build items are the
 **non-partisan editorial policy** and the **license/provenance gate**, reflecting their status as hard
@@ -487,12 +487,12 @@ early thesis check.
   **Independence / COI:** a reviewer recuses from a jurisdiction where they hold/seek office or have a
   material financial interest; name-use is limited to the versions they approved (no implied
   endorsement of unreviewed content); **disagreement fallback** — the expert holds a veto on whether
-  content is accurate/fair to ship, escalated to Elyos governance / a second reviewer on a tie.
+  content is accurate/fair to ship, escalated to Hee-Lee Oss governance / a second reviewer on a tie.
 - **Steward (last-mile owner): TO BE SECURED** — owns the partner relationship and the
   distribution/adoption that constitutes shipping.
 - **Partner / requestor: TO BE SECURED** — newsroom/data desk, library, open-data office, civic-tech
   org, or public-policy program.
-- **Community / board:** edge-cases and any license/scope decisions go through Elyos governance.
+- **Community / board:** edge-cases and any license/scope decisions go through Hee-Lee Oss governance.
 
 ---
 
@@ -506,8 +506,8 @@ early thesis check.
 - **Standards / upstream:** Open Contracting Data Standard (OCDS); Frictionless Tabular Data Package;
   COFOG functional classification; OpenSpending; Open Government Licence (where applicable);
   OpenStreetMap/ODbL (only if geodata is needed, isolated).
-- **Elyos pieces:** `packages/schema` (Task JSON), `CLAUDE.md` work rules + refusal guardrails,
-  `docs/good-deed-definition.md` (risk tiers), Elyos governance for license/edge-case decisions; house
+- **Hee-Lee Oss pieces:** `packages/schema` (Task JSON), `CLAUDE.md` work rules + refusal guardrails,
+  `docs/good-deed-definition.md` (risk tiers), Hee-Lee Oss governance for license/edge-case decisions; house
   style from `planning/projects/public-official-guide/{PLAN,TASKS}.md`.
 - **Human/decision dependencies (critical path):** the **pilot-jurisdiction decision (M0, gates
   M2–M6)** — fixes corpus, source-reuse legality, and reviewer profile; a secured public-finance
@@ -556,7 +556,7 @@ These are first-class red-team categories with their own regression cases.
 **Controls.** Neutrality + license/provenance gates as tested, CI-enforced subsystems (top controls).
 Reconciliation + citation-coverage gates prevent wrong/uncited figures. PII entity-vs-person screen +
 redaction of private-individual data. **No secrets/tokens/PII in logs, receipts, or committed files**
-(Elyos rule); provenance/refusal logs record metadata, not personal content. Reproducibility from
+(Hee-Lee Oss rule); provenance/refusal logs record metadata, not personal content. Reproducibility from
 checksummed snapshots makes every figure independently auditable. Dependency + secret scanning in CI.
 The agent-neutral core keeps vendor specifics behind the LLM client.
 
@@ -607,7 +607,7 @@ first is stable.
 
 ## References
 
-- Elyos work rules & refusal guardrails: `CLAUDE.md`
+- Hee-Lee Oss work rules & refusal guardrails: `CLAUDE.md`
 - Good-deed definition & risk tiers: `docs/good-deed-definition.md`
 - Task JSON schema: `packages/schema/src/schemas.ts`
 - Portfolio roadmap: `planning/ROADMAP.md` (Track 2; `open-spending-explainers`, `open-data-explainers`)

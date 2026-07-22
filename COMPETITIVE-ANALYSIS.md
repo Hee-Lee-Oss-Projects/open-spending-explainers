@@ -1,6 +1,6 @@
 # Open-Spending-Explainers — Competitive & Improvement Analysis
 
-> Scope: rigorous review of `PLAN.md` (v0.1.0, 2026-06-28) for the Elyos good-deed project
+> Scope: rigorous review of `PLAN.md` (v0.1.0, 2026-06-28) for the Hee-Lee Oss good-deed project
 > `open-spending-explainers` — plain-language, source-cited explainers of government budgets and
 > public contracts, built only from open fiscal data. Guardrails: strictly non-partisan, sourced to
 > official open data, accurate, no editorializing, transparent methodology, per-source license.
@@ -227,7 +227,7 @@ where comprehension need is highest and competition thinnest.
   review, never a model "judgment call."
 - **License/reuse legality is human-verified.** Claude may *summarize* a license; a human records the
   verified `permits-derivatives` + endorsement flags. (Model selection/pricing per the Claude API
-  skill; Claude sits behind the agent-neutral LLM client per Elyos core/adapter rule.)
+  skill; Claude sits behind the agent-neutral LLM client per Hee-Lee Oss core/adapter rule.)
 
 ---
 
