@@ -6,7 +6,7 @@ Public budgets and contracts are, in principle, open. In practice they are inacc
 
 **Definition of shipped:** | Corrections handled transparently | n/a | 100% of figure corrections logged in a public erratum changelog within the correction SLA | Corrections log audit |
 
-This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/Hee-Lee-Oss-Projects/hee-lee-oss-downloads
+This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/HeeLeeOss/hee-lee-oss-downloads
 
 ## Plan
 - [PLAN.md](./PLAN.md) — robust enterprise plan (vision, architecture, roadmap, risks; includes an applied-improvements appendix + review sign-off)
@@ -16,7 +16,7 @@ This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it wit
 ## Contribute
 ```bash
 hee-lee-oss browse
-hee-lee-oss next --repo Hee-Lee-Oss-Projects/open-spending-explainers --no-fork
+hee-lee-oss next --repo HeeLeeOss/open-spending-explainers --no-fork
 ```
 
 ## Licensing & review
